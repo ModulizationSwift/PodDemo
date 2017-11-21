@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import TDemo
+import PodDemo
 
 class Tests: XCTestCase {
     

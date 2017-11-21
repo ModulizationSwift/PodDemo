@@ -1,9 +1,11 @@
 use_frameworks!
 
-target 'TDemo_Example' do
-  pod 'TDemo', :path => '../'
+target 'PodDemo_Example' do
+  pod 'PodDemo', :path => '../'
+  pod 'Foundation+'
+  pod 'OCPodLib', :path => 'Specs/OCPodLib.podspec'
 
-  target 'TDemo_Tests' do
+  target 'PodDemo_Tests' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
