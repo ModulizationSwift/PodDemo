@@ -9,6 +9,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```ruby
+ source=1 pod install --verbose
+```
+
 ## Requirements
 
 ## Installation
