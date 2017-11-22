@@ -102,12 +102,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework.dSYM"
   install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework.dSYM"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework.dSYM"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework.dSYM"
   install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework.dSYM"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"
+  install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework"
+  install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework.dSYM"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

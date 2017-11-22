@@ -4,6 +4,9 @@ target 'PodDemo_Example' do
   pod 'PodDemo', :path => '../'
   pod 'Foundation+'#, :path => 'Specs/Foundation+.podspec'
   pod 'OCPodLib', :path => 'Specs/OCPodLib.podspec'
+  pod 'Alamofire', :path => '../Carthage/Alamofire.podspec'
+  pod 'MJRefresh', :path => '../Carthage/MJRefresh.podspec'
+  pod 'SideNavigation', :path => '../Carthage/SideNavigation.podspec'
 
   target 'PodDemo_Tests' do
     inherit! :search_paths
