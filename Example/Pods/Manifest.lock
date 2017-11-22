@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Foundation+ (0.1.3)
+  - Foundation+ (0.1.4)
   - OCPodLib (0.1.3)
   - PodDemo (0.1.0)
 
@@ -22,10 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Foundation+: 2e359649aed621e1b77c14f7ea71140deb83d0f9
+  Foundation+: aa0b94ac2d411b7fad168ee4ce7198614c55469e
   OCPodLib: 33bbf8cd519c8554dc43188818816d342101b924
   PodDemo: 73d11f5cbf0b5a32a96d649632b96adbf260a785
 
-PODFILE CHECKSUM: c31854ee8bd3bb4a420b08f5081c734067e67559
+PODFILE CHECKSUM: 0c9174443d212d23cca46a22271be78c22ef516a
 
 COCOAPODS: 1.3.1

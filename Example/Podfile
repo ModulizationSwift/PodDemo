@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'PodDemo_Example' do
   pod 'PodDemo', :path => '../'
-  pod 'Foundation+'
+  pod 'Foundation+'#, :path => 'Specs/Foundation+.podspec'
   pod 'OCPodLib', :path => 'Specs/OCPodLib.podspec'
 
   target 'PodDemo_Tests' do

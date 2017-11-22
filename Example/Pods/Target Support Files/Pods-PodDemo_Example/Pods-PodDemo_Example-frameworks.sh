@@ -102,11 +102,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
