@@ -104,7 +104,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework"
   install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework.dSYM"
-  install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/../Specs/Foundation_.framework"
   install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework"
   install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework.dSYM"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"
@@ -114,7 +114,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework"
   install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework.dSYM"
-  install_framework "${PODS_ROOT}/Foundation+/Foundation_.framework"
+  install_framework "${PODS_ROOT}/../Specs/Foundation_.framework"
   install_framework "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework"
   install_dsym "${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework.dSYM"
   install_framework "${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework"

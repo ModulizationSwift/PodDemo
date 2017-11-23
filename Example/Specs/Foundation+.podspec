@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/CNKCQ/Foundation.plus.git", :tag => "#{s.version}" }
 
 
-    if ENV['source'] || ENV['Foundation+']
+    if ENV['source'] == 'true' || ENV['Foundation+'] == 'true'
         s.source_files  = "Foundation+", "Foundation+/**/*.{h,m,swift}"
     else
         s.vendored_frameworks = "Foundation_.framework"

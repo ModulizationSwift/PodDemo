@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-    if ENV['source'] || ENV['OCPodLib']
+    if ENV['source'] == 'true' || ENV['OCPodLib'] == 'ture'
         s.source_files = 'OCPodLib/Classes/**/*'
         puts('echo 🌹-- install with source -- 🌹')
     else

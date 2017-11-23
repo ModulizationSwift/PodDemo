@@ -19,10 +19,7 @@
     "git": "https://github.com/CNKCQ/Foundation.plus.git",
     "tag": "0.1.4"
   },
-  "source_files": [
-    "Foundation+",
-    "Foundation+/**/*.{h,m,swift}"
-  ],
+  "vendored_frameworks": "Foundation_.framework",
   "resource_bundles": {
   },
   "frameworks": "Foundation"
