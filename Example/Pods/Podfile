@@ -1,0 +1,16 @@
+use_frameworks!
+
+target 'PodDemo_Example' do
+  pod 'PodDemo', :path => '../'
+  pod 'Foundation+'
+pod 'OCPodLib'
+  pod 'Alamofire'
+  pod 'MJRefresh'
+  pod 'SideNavigation'
+
+  target 'PodDemo_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end

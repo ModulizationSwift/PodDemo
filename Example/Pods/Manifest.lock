@@ -1,48 +1,46 @@
 PODS:
   - Alamofire (4.5.1)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - Foundation+ (0.1.4)
-  - MJRefresh (3.1.15)
-  - OCPodLib (0.1.3)
+  - FBSnapshotTestCase (4.5.1)
+  - Foundation+ (4.5.1)
+  - MJRefresh (4.5.1)
+  - OCPodLib (4.5.1)
   - PodDemo (0.1.0)
-  - SideNavigation (1.0.4)
+  - SideNavigation (4.5.1)
 
 DEPENDENCIES:
-  - Alamofire (from `../Carthage/Alamofire.podspec`)
-  - FBSnapshotTestCase (~> 2.1.4)
-  - Foundation+ (from `Specs/Foundation+.podspec`)
-  - MJRefresh (from `../Carthage/MJRefresh.podspec`)
-  - OCPodLib (from `Specs/OCPodLib.podspec`)
+  - Alamofire (from `Pods/Alamofire.podspec`)
+  - FBSnapshotTestCase (from `Pods/FBSnapshotTestCase.podspec`)
+  - Foundation+ (from `Pods/Foundation+.podspec`)
+  - MJRefresh (from `Pods/MJRefresh.podspec`)
+  - OCPodLib (from `Pods/OCPodLib.podspec`)
   - PodDemo (from `../`)
-  - SideNavigation (from `../Carthage/SideNavigation.podspec`)
+  - SideNavigation (from `Pods/SideNavigation.podspec`)
 
 EXTERNAL SOURCES:
   Alamofire:
-    :path: ../Carthage/Alamofire.podspec
+    :path: Pods/Alamofire.podspec
+  FBSnapshotTestCase:
+    :path: Pods/FBSnapshotTestCase.podspec
   Foundation+:
-    :path: Specs/Foundation+.podspec
+    :path: Pods/Foundation+.podspec
   MJRefresh:
-    :path: ../Carthage/MJRefresh.podspec
+    :path: Pods/MJRefresh.podspec
   OCPodLib:
-    :path: Specs/OCPodLib.podspec
+    :path: Pods/OCPodLib.podspec
   PodDemo:
     :path: ../
   SideNavigation:
-    :path: ../Carthage/SideNavigation.podspec
+    :path: Pods/SideNavigation.podspec
 
 SPEC CHECKSUMS:
-  Alamofire: 08bb659e4f64f564571d153bf75c46e7f4a2ea1c
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Foundation+: aa0b94ac2d411b7fad168ee4ce7198614c55469e
-  MJRefresh: 1930441da49165d600dd614343db47e9782bb386
-  OCPodLib: 33bbf8cd519c8554dc43188818816d342101b924
+  Alamofire: bce1239e040edb447c349cfd59470276411c71ce
+  FBSnapshotTestCase: 6fd6ca61d9f2b6c4a9d28527ea86768425843849
+  Foundation+: e48248a930fc4330e83681611a22a825ea010fe3
+  MJRefresh: 394db6b22c271c7513f5b822f44d675d56fef716
+  OCPodLib: 5c60a89fd72b293c40c89939c3e6221ed9fbfa13
   PodDemo: 73d11f5cbf0b5a32a96d649632b96adbf260a785
-  SideNavigation: 087dad58bb08d3da463449e3a3f083c66a483405
+  SideNavigation: 4c889bf90bfc1da8005b6321896743031dc21916
 
-PODFILE CHECKSUM: 607628dc9544ac2db4b229895da067acef15d583
+PODFILE CHECKSUM: 2dbb6448e2c4fe4a825dcead4c9a8beea5c43c49
 
 COCOAPODS: 1.3.1

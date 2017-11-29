@@ -1,26 +1,22 @@
 {
   "name": "Foundation+",
-  "version": "0.1.4",
-  "summary": "A collection extension for Foundation entity.",
-  "description": "it's a collection extension of the Foundation entity, you can use it in you project",
-  "homepage": "https://github.com/CNKCQ/Foundation.plus.git",
-  "screenshots": "http://7xslr9.com1.z0.glb.clouddn.com/IDCardKeyboard.gif",
-  "license": {
-    "type": "Apache",
-    "file": "LICENSE"
-  },
+  "version": "4.5.1",
+  "license": "MIT",
+  "summary": "Elegant HTTP Networking in Swift",
+  "homepage": "https://github.com/Alamofire/Alamofire",
+  "social_media_url": "http://twitter.com/AlamofireSF",
   "authors": {
-    "CNKCQ": "wangchengqvan@gmail.com"
-  },
-  "platforms": {
-    "ios": "9.0"
+    "Alamofire Software Foundation": "info@alamofire.org"
   },
   "source": {
-    "git": "https://github.com/CNKCQ/Foundation.plus.git",
-    "tag": "0.1.4"
+    "git": "https://github.com/Alamofire/Alamofire.git",
+    "tag": "4.5.1"
   },
-  "vendored_frameworks": "Foundation_.framework",
-  "resource_bundles": {
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.10",
+    "tvos": "9.0",
+    "watchos": "2.0"
   },
-  "frameworks": "Foundation"
+  "vendored_frameworks": "Carthage/Build/iOS/Foundation+.framework"
 }

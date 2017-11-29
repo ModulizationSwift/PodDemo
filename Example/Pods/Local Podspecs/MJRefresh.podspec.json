@@ -1,20 +1,22 @@
 {
   "name": "MJRefresh",
-  "version": "3.1.15",
-  "summary": "An easy way to use pull-to-refresh",
-  "homepage": "https://github.com/CoderMJLee/MJRefresh",
+  "version": "4.5.1",
   "license": "MIT",
+  "summary": "Elegant HTTP Networking in Swift",
+  "homepage": "https://github.com/Alamofire/Alamofire",
+  "social_media_url": "http://twitter.com/AlamofireSF",
   "authors": {
-    "MJ Lee": "199109106@qq.com"
-  },
-  "platforms": {
-    "ios": "6.0"
+    "Alamofire Software Foundation": "info@alamofire.org"
   },
   "source": {
-    "git": "https://github.com/CoderMJLee/MJRefresh.git",
-    "tag": "3.1.15"
+    "git": "https://github.com/Alamofire/Alamofire.git",
+    "tag": "4.5.1"
   },
-  "vendored_frameworks": "Build/iOS/MJRefresh.framework",
-  "source_files": "Checkouts/MJRefresh/MJRefresh/*.h",
-  "requires_arc": true
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.10",
+    "tvos": "9.0",
+    "watchos": "2.0"
+  },
+  "vendored_frameworks": "Carthage/Build/iOS/MJRefresh.framework"
 }

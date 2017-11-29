@@ -1,11 +1,9 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks "$PODS_CONFIGURATION_BUILD_DIR/FBSnapshotTestCase" "${PODS_ROOT}/../../Carthage/Build/iOS" "${PODS_ROOT}/../Specs" "${PODS_ROOT}/../Specs/OCPodLib/Frameworks"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Carthage/Build/iOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Alamofire" "${PODS_ROOT}/Headers/Public/Foundation+" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/OCPodLib" "${PODS_ROOT}/Headers/Public/PodDemo" "${PODS_ROOT}/Headers/Public/SideNavigation"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Alamofire" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/Foundation+" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/OCPodLib" "${PODS_ROOT}/Headers/Public/PodDemo" "${PODS_ROOT}/Headers/Public/SideNavigation"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/FBSnapshotTestCase/FBSnapshotTestCase.framework/Headers" $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Alamofire" -isystem "${PODS_ROOT}/Headers/Public/Foundation+" -isystem "${PODS_ROOT}/Headers/Public/MJRefresh" -isystem "${PODS_ROOT}/Headers/Public/OCPodLib" -isystem "${PODS_ROOT}/Headers/Public/PodDemo" -isystem "${PODS_ROOT}/Headers/Public/SideNavigation"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "FBSnapshotTestCase" -framework "Foundation" -framework "Foundation_" -framework "MJRefresh" -framework "OCPodLib" -framework "SideNavigation"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Alamofire" -isystem "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" -isystem "${PODS_ROOT}/Headers/Public/Foundation+" -isystem "${PODS_ROOT}/Headers/Public/MJRefresh" -isystem "${PODS_ROOT}/Headers/Public/OCPodLib" -isystem "${PODS_ROOT}/Headers/Public/PodDemo" -isystem "${PODS_ROOT}/Headers/Public/SideNavigation"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "FBSnapshotTestCase" -framework "MJRefresh" -framework "SideNavigation"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

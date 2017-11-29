@@ -10,6 +10,20 @@
 #endif
 #endif
 
+#import "MJRefreshAutoFooter.h"
+#import "MJRefreshBackFooter.h"
+#import "MJRefreshComponent.h"
+#import "MJRefreshFooter.h"
+#import "MJRefreshHeader.h"
+#import "MJRefreshAutoGifFooter.h"
+#import "MJRefreshAutoNormalFooter.h"
+#import "MJRefreshAutoStateFooter.h"
+#import "MJRefreshBackGifFooter.h"
+#import "MJRefreshBackNormalFooter.h"
+#import "MJRefreshBackStateFooter.h"
+#import "MJRefreshGifHeader.h"
+#import "MJRefreshNormalHeader.h"
+#import "MJRefreshStateHeader.h"
 #import "MJRefresh.h"
 #import "MJRefreshConst.h"
 #import "NSBundle+MJRefresh.h"

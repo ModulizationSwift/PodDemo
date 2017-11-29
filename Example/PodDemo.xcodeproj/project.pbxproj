@@ -286,11 +286,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PodDemo_Tests/Pods-PodDemo_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework",
+				"${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/FBSnapshotTestCase.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -304,23 +306,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PodDemo_Example/Pods-PodDemo_Example-frameworks.sh",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/Alamofire.framework.dSYM",
-				"${PODS_ROOT}/../Specs/Foundation_.framework",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/MJRefresh.framework.dSYM",
-				"${PODS_ROOT}/../Specs/OCPodLib/Frameworks/OCPodLib.framework",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework",
-				"${PODS_ROOT}/../../Carthage/Build/iOS/SideNavigation.framework.dSYM",
+				"${PODS_ROOT}/Carthage/Build/iOS/Alamofire.framework",
+				"${PODS_ROOT}/Carthage/Build/iOS/Alamofire.framework.dSYM",
+				"${PODS_ROOT}/Carthage/Build/iOS/MJRefresh.framework",
+				"${PODS_ROOT}/Carthage/Build/iOS/MJRefresh.framework.dSYM",
+				"${PODS_ROOT}/Carthage/Build/iOS/SideNavigation.framework",
+				"${PODS_ROOT}/Carthage/Build/iOS/SideNavigation.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Alamofire.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Foundation_.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/MJRefresh.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCPodLib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideNavigation.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/SideNavigation.framework.dSYM",
 			);

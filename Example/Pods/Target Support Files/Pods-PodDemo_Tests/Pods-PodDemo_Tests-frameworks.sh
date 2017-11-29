@@ -102,10 +102,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
+  install_framework "${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework"
+  install_dsym "${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework.dSYM"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
+  install_framework "${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework"
+  install_dsym "${PODS_ROOT}/Carthage/Build/iOS/FBSnapshotTestCase.framework.dSYM"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -18,21 +18,136 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
+    # cocoapods
 
   end
 
+  desc "git clone remote code"
+  lane :pod_fetch do
+    puts("🌹---#{podfile_modules}--🌹")
+    Dir.chdir('../Pods') do
+      xcshareddata = 'Pods.xcodeproj/xcshareddata/xcschemes'
+      FileUtils.mkpath xcshareddata unless File.exists?(xcshareddata)
+      podfile_modules.each do |module_name|
+        modulexcscheme = "Pods.xcodeproj/xcuserdata/steve.xcuserdatad/xcschemes/#{module_name}.xcscheme"
+        if File.exists?(modulexcscheme) == true
+          puts("🌹-🇺🇸---")
+          `mv #{modulexcscheme} #{xcshareddata}`
+        end
+        `curl -fsSL https://github.com/Alamofire/Alamofire/blob/master/Alamofire.podspec?raw=true > #{module_name}.podspec`
+      end
+       `carthage build --platform iOS --no-skip-current`
+    end
+    `rm -rf ../build`
+    spec_modify
+    podfile_modify
+  end
+
+  def podfile_modules
+    module_list = []
+    Dir.chdir('../') do
+      File.open('Podfile', 'r') do |file|
+        file.each_line do |line|
+          if line.include?(':path') == false && line.include?('pod') == true
+            pod_module = line.split(/'/)[1]
+            module_list.insert(-1, pod_module)
+          end
+        end
+      end
+      return module_list
+    end
+  end
+
+  def podfile_modify
+    Dir.chdir('../') do
+      if File.readlines('Podfile').grep(/#modified/).empty? == true
+        temp_file = Tempfile.new('.Podfile.temp')
+          begin
+            File.open('Podfile', 'r') do |file|
+              temp_file.puts('#modified')
+              file.each_line do |line|
+                temp_line = ''
+                if line.include?(':path') == false && line.include?('pod') == true
+                  pod_module = line.split(/'/)[1]
+                  puts("🌹--#{pod_module}--🌹")
+                  # .chomp 去除行尾换行符
+                    temp_line = " #{line.chomp},:path => 'Pods/#{pod_module}.podspec'"
+                else
+                    temp_line = line
+                end
+                temp_file.puts temp_line
+              end
+            end
+            temp_file.close
+            FileUtils.mv(temp_file.path, 'Podfile')
+          ensure
+            temp_file.close
+            temp_file.unlink
+          end
+      end
+    end
+    # podfile_lines = File.readlines('Podfile')
+    # puts(podfile)
+    # podfile_lines.collect do |sentence|
+    #   puts("🌹--#{sentence}--🌹")
+    # end
+  end
+
+   # "Spec modify"
+  def spec_modify
+    Dir.chdir('../Pods') do
+      podfile_modules.each do |module_name|
+        if File.readlines("#{module_name}.podspec").grep(/#modified/).empty? == true
+          puts("🌹🇺🇸🌹")
+          temp_file = Tempfile.new('.Spec.temp')
+            begin
+              File.open("#{module_name}.podspec", 'r') do |file|
+                temp_file.puts('#modified')
+                file.each_line do |line|
+                  temp_line = ''
+                  if line.include?('s.source_files')
+                    # .chomp
+                      temp_line = "if ENV['source'] == true || ENV['#{module_name}'] == true\n s.source_files = '#{module_name}/Source/*.swift'\n else\n s.vendored_frameworks = \"Carthage/Build/iOS/#{module_name}.framework\"\nend"
+                  else
+                    if line.include?('s.name')
+                      temp_line = "s.name = '#{module_name}'"
+                    else
+                      temp_line = line
+                    end
+                  end
+                  temp_file.puts temp_line
+                end
+              end
+              temp_file.close
+              FileUtils.mv(temp_file.path, "#{module_name}.podspec")
+            ensure
+              temp_file.close
+              temp_file.unlink
+            end
+        end
+      end
+    end
+  end
+
+  desc "Read podfile content"
+  lane :pod_read do |options|
+    # puts('read')
+    podfile_modify
+    # spec_modify
+  end
+
   desc "Start pod install with sources"
-  lane :pod_install do |options|
-    puts('--🌹--- source --- 🌹 --')
-    ENV['source'] = 'true'
-    cocoapods
+  lane :pod_install do
+    podfile_modify
+    spec_modify
+    `source=true pod install --verbose`
   end
 
   desc "Start pod install with lib"
   lane :lib_install do
-    puts('--🌹--- lib --- 🌹 --')
-    cocoapods
+    podfile_modify
+    # spec_modify
+    `pod install --verbose`
   end
 
   desc "Runs all the tests"

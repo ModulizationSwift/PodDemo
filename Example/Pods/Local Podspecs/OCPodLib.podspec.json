@@ -1,23 +1,22 @@
 {
   "name": "OCPodLib",
-  "version": "0.1.3",
-  "summary": "A short description of OCPodLib.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/wangchengqvan@gmail.com/OCPodLib",
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
+  "version": "4.5.1",
+  "license": "MIT",
+  "summary": "Elegant HTTP Networking in Swift",
+  "homepage": "https://github.com/Alamofire/Alamofire",
+  "social_media_url": "http://twitter.com/AlamofireSF",
   "authors": {
-    "wangchengqvan@gmail.com": "chengquan.wang@ele.me"
+    "Alamofire Software Foundation": "info@alamofire.org"
   },
   "source": {
-    "git": "https://github.com/OCModule/OCPodLib.git",
-    "tag": "0.1.3"
+    "git": "https://github.com/Alamofire/Alamofire.git",
+    "tag": "4.5.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.10",
+    "tvos": "9.0",
+    "watchos": "2.0"
   },
-  "source_files": "OCPodLib/Classes/**/*.h",
-  "vendored_frameworks": "OCPodLib/Frameworks/OCPodLib.framework"
+  "vendored_frameworks": "Carthage/Build/iOS/OCPodLib.framework"
 }
