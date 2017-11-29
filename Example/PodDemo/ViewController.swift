@@ -8,6 +8,7 @@
 
 import UIKit
 //import Foundation_
+import SideNavigation
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 //        let arry: [String] = []
 //        print(arry.length)
+        SideMenuManager(self, left: self)
     }
 
     override func didReceiveMemoryWarning() {

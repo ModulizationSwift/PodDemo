@@ -50,6 +50,11 @@ Start pod install with sources
 fastlane ios lib_install
 ```
 Start pod install with lib
+### ios input_test
+```
+fastlane ios input_test
+```
+not easy to hold the result
 ### ios test
 ```
 fastlane ios test

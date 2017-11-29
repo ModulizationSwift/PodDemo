@@ -150,6 +150,14 @@ platform :ios do
     `pod install --verbose`
   end
 
+  desc "not easy to hold the result"
+  lane :input_test do |options|
+    puts("🌹---#{options[:key]}---🌹")
+    puts("🌹---#{options[:keys]}---🌹")
+    # usage
+    # fastlane input_test "key: 1, 2, 3, 4" "keys: 789"
+  end
+
   desc "Runs all the tests"
   lane :test do
     scan
