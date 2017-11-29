@@ -11,6 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```ruby
  source=1 pod install --verbose
+ fastlane pod_install "lib: Alamofire, MJRefresh, SideNavigation"
 ```
 
 ## Requirements
@@ -31,3 +32,5 @@ wangchengqvan@gmail.com, chengquan.wang@ele.me
 ## License
 
 TDemo is available under the MIT license. See the LICENSE file for more info.
+
+

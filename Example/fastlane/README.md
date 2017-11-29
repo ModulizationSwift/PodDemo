@@ -30,21 +30,11 @@ xcode-select --install
 
 # Available Actions
 ## iOS
-### ios pod_fetch
-```
-fastlane ios pod_fetch
-```
-git clone remote code
-### ios pod_read
-```
-fastlane ios pod_read
-```
-Read podfile content
 ### ios pod_install
 ```
 fastlane ios pod_install
 ```
-Start pod install with sources
+Start pod install
 ### ios lib_install
 ```
 fastlane ios lib_install
